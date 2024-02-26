@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import(
+	"fmt"
+	"reflect"
+)
 
 
 func main(){
@@ -29,9 +32,13 @@ func main(){
 
 	fmt.Printf("Hex representation of integer is %x \n", x)
 
+	fmt.Printf("Type for integer using reflect.TypeOf is %v \n", reflect.TypeOf(x))
+
+
+
 	var name string = "World is"
 
-	fmt.Println("String length is ", len(name))
+	fmt.Println("String length is ", len(name) ,"characters long")
 
 	fmt.Println(name + " Great!")
 
