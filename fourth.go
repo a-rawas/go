@@ -26,4 +26,24 @@ func main(){
 	for i, value:=range OddNum {
 		fmt.Println("OddNum[",i,"] -",value)
 	}
+
+	numSlice:= []int{5,4,3,2,1}
+	sliced := numSlice[3:5]
+	fmt.Println("numSlice", numSlice)
+	fmt.Println("numSlice[3:5]", sliced)
+
+	slice1 := numSlice[0:]
+	fmt.Println("numSlice[0:]", slice1)
+
+	slice2 := numSlice[0:2]
+	fmt.Println("numSlice[0:2]", slice2)
+    // Using make() to create a slice with a specified length and capacity
+	newSlice := make([]int,5,6)
+	fmt.Println("newSlice[]", newSlice)
+
+	copy(newSlice,numSlice)
+	fmt.Println("newSlice[]", newSlice)
+	newSlice = append(newSlice, 11,12,13,14,15,16,17,18)
+	fmt.Println("newSlice[]", newSlice)
+
 }
